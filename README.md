@@ -22,3 +22,10 @@ You can check FKArchitectureGeneratorCLI out for details on [Medium story](https
  FKArchitectureGeneratorCLI add a mark as a default to each swift file indicating this module created with this cli. You can hide this mark by adding the flag -u/--unmarked
  
  `fk mvvm ModuleName -u` or `fk mvvm ModuleName -unmarked` 
+
+## Author
+
+Furkan Kaplan https://github.com/furkankaplan <br>
+Twitter  : [@furkaplan](https://twitter.com/furkaplan) <br>
+LinkedIn : [@furkankaplan07](https://www.linkedin.com/in/furkankaplan07/) <br>
+Email    : **furkankaplan@outlook.com**
