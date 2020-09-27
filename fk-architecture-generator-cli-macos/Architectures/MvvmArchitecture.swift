@@ -10,6 +10,10 @@ import Foundation
 struct MvvmArchitecture: Architecture {
     
     var name: String
+    
+    init(name: String = "") {
+        self.name = name
+    }
         
     private var xibFile: String {
         get {
@@ -46,7 +50,7 @@ struct MvvmArchitecture: Architecture {
             //
             //  \(name)ViewController.swift
             //
-            //  Created on \(Date()).
+            //  \(ArchitectureUtility.header)
             //
 
             import UIKit
@@ -81,7 +85,7 @@ struct MvvmArchitecture: Architecture {
             //
             //  \(name)ViewModel.swift
             //
-            //  Created on \(Date()).
+            //  \(ArchitectureUtility.header)
             //
 
             import Foundation

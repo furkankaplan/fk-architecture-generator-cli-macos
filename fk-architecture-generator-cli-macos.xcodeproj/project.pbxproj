@@ -13,6 +13,9 @@
 		A93633ED251FE834009E74EA /* MvvmArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93633EC251FE834009E74EA /* MvvmArchitecture.swift */; };
 		A93633F1251FE870009E74EA /* ViperArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93633F0251FE870009E74EA /* ViperArchitecture.swift */; };
 		A936341E25200101009E74EA /* ArchitectureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936341D25200101009E74EA /* ArchitectureProtocol.swift */; };
+		A99FBF7E2520BAC500FF23F2 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FBF7D2520BAC500FF23F2 /* DateExtension.swift */; };
+		A99FBF812520BBD900FF23F2 /* ArchitectureUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FBF802520BBD900FF23F2 /* ArchitectureUtility.swift */; };
+		A99FBFA52520BF7D00FF23F2 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FBFA42520BF7D00FF23F2 /* AppUtility.swift */; };
 		A9A2BA61252093CB00B19008 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2BA60252093CB00B19008 /* Logger.swift */; };
 		A9A2BA642520962200B19008 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2BA632520962200B19008 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +39,9 @@
 		A93633EC251FE834009E74EA /* MvvmArchitecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmArchitecture.swift; sourceTree = "<group>"; };
 		A93633F0251FE870009E74EA /* ViperArchitecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperArchitecture.swift; sourceTree = "<group>"; };
 		A936341D25200101009E74EA /* ArchitectureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureProtocol.swift; sourceTree = "<group>"; };
+		A99FBF7D2520BAC500FF23F2 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		A99FBF802520BBD900FF23F2 /* ArchitectureUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureUtility.swift; sourceTree = "<group>"; };
+		A99FBFA42520BF7D00FF23F2 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		A9A2BA60252093CB00B19008 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A9A2BA632520962200B19008 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +77,7 @@
 		A93633D5251FD1F9009E74EA /* fk-architecture-generator-cli-macos */ = {
 			isa = PBXGroup;
 			children = (
+				A99FBF7C2520BAB800FF23F2 /* Extensions */,
 				A9A2BBE125209D7600B19008 /* Protocols */,
 				A936341C252000C9009E74EA /* Utilities */,
 				A93633EB251FE7F5009E74EA /* Architectures */,
@@ -102,8 +109,18 @@
 			children = (
 				A9A2BA60252093CB00B19008 /* Logger.swift */,
 				A9A2BA632520962200B19008 /* Constants.swift */,
+				A99FBF802520BBD900FF23F2 /* ArchitectureUtility.swift */,
+				A99FBFA42520BF7D00FF23F2 /* AppUtility.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A99FBF7C2520BAB800FF23F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A99FBF7D2520BAC500FF23F2 /* DateExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A9A2BBE125209D7600B19008 /* Protocols */ = {
@@ -178,6 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A936341E25200101009E74EA /* ArchitectureProtocol.swift in Sources */,
+				A99FBF7E2520BAC500FF23F2 /* DateExtension.swift in Sources */,
+				A99FBFA52520BF7D00FF23F2 /* AppUtility.swift in Sources */,
+				A99FBF812520BBD900FF23F2 /* ArchitectureUtility.swift in Sources */,
 				A93633F1251FE870009E74EA /* ViperArchitecture.swift in Sources */,
 				A93633E3251FD50E009E74EA /* Onboard.swift in Sources */,
 				A9A2BA61252093CB00B19008 /* Logger.swift in Sources */,

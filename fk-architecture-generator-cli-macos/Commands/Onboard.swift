@@ -22,16 +22,11 @@ struct Onboard: ParsableCommand {
             let mvvm = MvvmArchitecture(name: name)
             mvvm.produceModule()
         } else if architecture == VIPER {
-            self.produceViperModule()
+            let viper = ViperArchitecture(name: name)
+            viper.produceModule()
         } else {
             Logger.log(.error, message: UNSUPPORTED_MODULE_ERROR)
         }
     }
     
-    
-    
-    private func produceViperModule() {
-        
-    }
-        
 }
