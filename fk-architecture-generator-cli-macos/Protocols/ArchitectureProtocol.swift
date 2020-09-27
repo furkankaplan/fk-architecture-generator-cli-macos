@@ -15,7 +15,8 @@ protocol Architecture {
     /// two directories called Views and ViewModels inside Foo module directory.
     /// Just drag & drop the module created in your desktop to your project structure.
     var name: String { get }
+    var isMarkHidden: Bool! { get set }
     
-    func produceModule()
+    mutating func produceModule(isMarkHidden: Bool)
     
 }

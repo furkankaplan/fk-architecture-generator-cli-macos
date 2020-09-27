@@ -9,8 +9,8 @@ import Foundation
 
 struct ArchitectureUtility {
     
-    static var header: String {
-        return "Created by \(NSFullUserName()) on \(Date().toFormattedDate()) with \(AppUtility.name)."
+    static func header(isMarkHidden: Bool) -> String {
+        return "Created by \(NSFullUserName()) on \(Date().toFormattedDate())\(isMarkHidden ? "." : " with \(AppUtility.name).")"
     }
-    
+        
 }

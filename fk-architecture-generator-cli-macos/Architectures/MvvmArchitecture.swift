@@ -10,6 +10,7 @@ import Foundation
 struct MvvmArchitecture: Architecture {
     
     var name: String
+    var isMarkHidden: Bool!
     
     init(name: String = "") {
         self.name = name
@@ -50,7 +51,7 @@ struct MvvmArchitecture: Architecture {
             //
             //  \(name)ViewController.swift
             //
-            //  \(ArchitectureUtility.header)
+            //  \(ArchitectureUtility.header(isMarkHidden: isMarkHidden))
             //
 
             import UIKit
@@ -85,7 +86,7 @@ struct MvvmArchitecture: Architecture {
             //
             //  \(name)ViewModel.swift
             //
-            //  \(ArchitectureUtility.header)
+            //  \(ArchitectureUtility.header(isMarkHidden: isMarkHidden))
             //
 
             import Foundation
@@ -97,7 +98,9 @@ struct MvvmArchitecture: Architecture {
         }
     }
     
-    func produceModule() {
+    mutating func produceModule(isMarkHidden: Bool) {
+        self.isMarkHidden = isMarkHidden
+        
         let manager = FileManager.default
         
         guard let url = manager.urls(for: .desktopDirectory, in: .userDomainMask).first else { return }

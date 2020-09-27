@@ -10,6 +10,7 @@ import Foundation
 struct ViperArchitecture: Architecture {
 
     var name: String
+    var isMarkHidden: Bool!
     
     init(name: String = "") {
         self.name = name
@@ -50,7 +51,7 @@ struct ViperArchitecture: Architecture {
             //
             //  \(name)View.swift
             //
-            //  \(ArchitectureUtility.header)
+            //  \(ArchitectureUtility.header(isMarkHidden: isMarkHidden))
             //
 
             import UIKit
@@ -79,7 +80,7 @@ struct ViperArchitecture: Architecture {
             //
             //  \(name)Interactor.swift
             //
-            //  \(ArchitectureUtility.header)
+            //  \(ArchitectureUtility.header(isMarkHidden: isMarkHidden))
             //
 
             import Foundation
@@ -99,7 +100,7 @@ struct ViperArchitecture: Architecture {
             //
             //  \(name)View.swift
             //
-            //  \(ArchitectureUtility.header)
+            //  \(ArchitectureUtility.header(isMarkHidden: isMarkHidden))
             //
 
             import Foundation
@@ -124,7 +125,7 @@ struct ViperArchitecture: Architecture {
             //
             //  \(name)Router.swift
             //
-            //  \(ArchitectureUtility.header)
+            //  \(ArchitectureUtility.header(isMarkHidden: isMarkHidden))
             //
 
             import Foundation
@@ -152,7 +153,7 @@ struct ViperArchitecture: Architecture {
             //
             //  \(name)Protocols.swift
             //
-            //  \(ArchitectureUtility.header)
+            //  \(ArchitectureUtility.header(isMarkHidden: isMarkHidden))
             //
 
             import Foundation
@@ -182,7 +183,9 @@ struct ViperArchitecture: Architecture {
         }
     }
     
-    func produceModule() {
+    mutating func produceModule(isMarkHidden: Bool) {
+        self.isMarkHidden = isMarkHidden
+        
         let manager = FileManager.default
         
         guard let url = manager.urls(for: .desktopDirectory, in: .userDomainMask).first else { return }

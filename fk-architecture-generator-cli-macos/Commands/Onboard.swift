@@ -10,20 +10,23 @@ import ArgumentParser
 
 struct Onboard: ParsableCommand {
     
+    @Flag(name: .shortAndLong, help: "You can hide the [\(AppUtility.name)] mark from file documentation")
+    var unmarked: Bool = false
+    
     @Argument(help: "Type of the architecture to produce module.")
-    var architecture: String
+    var architecture: String = "mvvm"
     
     @Argument(help: "Name of the module")
-    var name: String
+    var name: String = "Test"
             
     mutating func run() throws {
         // viper / mvvm for now.
         if architecture == MVVM {
-            let mvvm = MvvmArchitecture(name: name)
-            mvvm.produceModule()
+            var mvvm = MvvmArchitecture(name: name)
+            mvvm.produceModule(isMarkHidden: unmarked)
         } else if architecture == VIPER {
-            let viper = ViperArchitecture(name: name)
-            viper.produceModule()
+            var viper = ViperArchitecture(name: name)
+            viper.produceModule(isMarkHidden: unmarked)
         } else {
             Logger.log(.error, message: UNSUPPORTED_MODULE_ERROR)
         }
