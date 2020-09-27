@@ -42,6 +42,7 @@
 		A99FBF7D2520BAC500FF23F2 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		A99FBF802520BBD900FF23F2 /* ArchitectureUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureUtility.swift; sourceTree = "<group>"; };
 		A99FBFA42520BF7D00FF23F2 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		A99FBFA82520D71000FF23F2 /* fk */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = fk; sourceTree = "<group>"; };
 		A9A2BA60252093CB00B19008 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A9A2BA632520962200B19008 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +78,7 @@
 		A93633D5251FD1F9009E74EA /* fk-architecture-generator-cli-macos */ = {
 			isa = PBXGroup;
 			children = (
+				A99FBFA72520D71000FF23F2 /* Product */,
 				A99FBF7C2520BAB800FF23F2 /* Extensions */,
 				A9A2BBE125209D7600B19008 /* Protocols */,
 				A936341C252000C9009E74EA /* Utilities */,
@@ -121,6 +123,14 @@
 				A99FBF7D2520BAC500FF23F2 /* DateExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A99FBFA72520D71000FF23F2 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				A99FBFA82520D71000FF23F2 /* fk */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		A9A2BBE125209D7600B19008 /* Protocols */ = {
