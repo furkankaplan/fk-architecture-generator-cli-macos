@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		A93633D7251FD1F9009E74EA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93633D6251FD1F9009E74EA /* main.swift */; };
 		A93633E0251FD36A009E74EA /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = A93633DF251FD36A009E74EA /* ArgumentParser */; };
+		A93633E3251FD50E009E74EA /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93633E2251FD50E009E74EA /* Onboard.swift */; };
+		A93633ED251FE834009E74EA /* MvvmArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93633EC251FE834009E74EA /* MvvmArchitecture.swift */; };
+		A93633F1251FE870009E74EA /* ViperArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93633F0251FE870009E74EA /* ViperArchitecture.swift */; };
+		A936341E25200101009E74EA /* ArchitectureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936341D25200101009E74EA /* ArchitectureProtocol.swift */; };
+		A9A2BA61252093CB00B19008 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2BA60252093CB00B19008 /* Logger.swift */; };
+		A9A2BA642520962200B19008 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2BA632520962200B19008 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +32,12 @@
 /* Begin PBXFileReference section */
 		A93633D3251FD1F9009E74EA /* fk-architecture-generator-cli-macos */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "fk-architecture-generator-cli-macos"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93633D6251FD1F9009E74EA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A93633E2251FD50E009E74EA /* Onboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
+		A93633EC251FE834009E74EA /* MvvmArchitecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmArchitecture.swift; sourceTree = "<group>"; };
+		A93633F0251FE870009E74EA /* ViperArchitecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperArchitecture.swift; sourceTree = "<group>"; };
+		A936341D25200101009E74EA /* ArchitectureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureProtocol.swift; sourceTree = "<group>"; };
+		A9A2BA60252093CB00B19008 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		A9A2BA632520962200B19008 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +71,47 @@
 		A93633D5251FD1F9009E74EA /* fk-architecture-generator-cli-macos */ = {
 			isa = PBXGroup;
 			children = (
-				A93633D6251FD1F9009E74EA /* main.swift */,
+				A9A2BBE125209D7600B19008 /* Protocols */,
+				A936341C252000C9009E74EA /* Utilities */,
+				A93633EB251FE7F5009E74EA /* Architectures */,
+				A93633EA251FE6BB009E74EA /* Commands */,
 			);
 			path = "fk-architecture-generator-cli-macos";
+			sourceTree = "<group>";
+		};
+		A93633EA251FE6BB009E74EA /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				A93633D6251FD1F9009E74EA /* main.swift */,
+				A93633E2251FD50E009E74EA /* Onboard.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		A93633EB251FE7F5009E74EA /* Architectures */ = {
+			isa = PBXGroup;
+			children = (
+				A93633EC251FE834009E74EA /* MvvmArchitecture.swift */,
+				A93633F0251FE870009E74EA /* ViperArchitecture.swift */,
+			);
+			path = Architectures;
+			sourceTree = "<group>";
+		};
+		A936341C252000C9009E74EA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A9A2BA60252093CB00B19008 /* Logger.swift */,
+				A9A2BA632520962200B19008 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A9A2BBE125209D7600B19008 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A936341D25200101009E74EA /* ArchitectureProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A936341E25200101009E74EA /* ArchitectureProtocol.swift in Sources */,
+				A93633F1251FE870009E74EA /* ViperArchitecture.swift in Sources */,
+				A93633E3251FD50E009E74EA /* Onboard.swift in Sources */,
+				A9A2BA61252093CB00B19008 /* Logger.swift in Sources */,
+				A93633ED251FE834009E74EA /* MvvmArchitecture.swift in Sources */,
 				A93633D7251FD1F9009E74EA /* main.swift in Sources */,
+				A9A2BA642520962200B19008 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
