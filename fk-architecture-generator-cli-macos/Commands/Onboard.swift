@@ -14,10 +14,10 @@ struct Onboard: ParsableCommand {
     var unmarked: Bool = false
     
     @Argument(help: "Type of the architecture to produce module.")
-    var architecture: String = "mvvm"
+    var architecture: String
     
     @Argument(help: "Name of the module")
-    var name: String = "Test"
+    var name: String
             
     mutating func run() throws {
         // viper / mvvm for now.
