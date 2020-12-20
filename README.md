@@ -6,7 +6,15 @@ You can check FKArchitectureGeneratorCLI out for details on [Medium story](https
 
  ## How to setup
 
- It's super easy. Just download the fk executable file in the Product directory and move it under to /usr/local/bin/ path. Here it's ready to produce your MVVM and VIPER modules for your iOS apps.
+It's super easy. Here these steps;
+
+-Just download the fk executable file in the Product directory.
+
+-Open terminal and navigate the current directory to the directory where you have just download the fk file. 
+
+-Then type chmod +x fk and press enter. Move it under to /usr/local/bin/ path.
+
+Well it's ready to produce your MVVM and VIPER modules for your iOS apps.
 
  ## How to use
 
