@@ -27,7 +27,7 @@ struct ViperArchitecture: Architecture {
                 <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
             </dependencies>
             <objects>
-                <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="\(name)ViewController" customModuleProvider="target">
+                <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="\(name)View" customModuleProvider="target">
                     <connections>
                         <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                     </connections>
