@@ -87,7 +87,7 @@ struct ViperArchitecture: Architecture {
 
             class \(name)Interactor: \(name)InteractorProtocol {
 
-                var presenter: \(name)InteractorOutputProtocol?
+                weak var presenter: \(name)InteractorOutputProtocol?
             
             }
             """
@@ -107,7 +107,7 @@ struct ViperArchitecture: Architecture {
 
             class \(name)Presenter: \(name)PresenterProtocol {
 
-                var view: \(name)PresenterOutputProtocol?
+                weak var view: \(name)PresenterOutputProtocol?
                 var interactor: \(name)InteractorProtocol?
                 var router: \(name)RouterProtocol?
             
@@ -158,8 +158,8 @@ struct ViperArchitecture: Architecture {
 
             import Foundation
 
-            protocol \(name)PresenterProtocol {
-                var view: \(name)PresenterOutputProtocol? { get set }
+            protocol \(name)PresenterProtocol: class {
+                weak var view: \(name)PresenterOutputProtocol? { get set }
                 var interactor: \(name)InteractorProtocol? { get set }
                 var router: \(name)RouterProtocol? { get set }
             }
@@ -172,8 +172,8 @@ struct ViperArchitecture: Architecture {
                 
             }
 
-            protocol \(name)InteractorProtocol {
-                var presenter: \(name)InteractorOutputProtocol? { get set }
+            protocol \(name)InteractorProtocol: class {
+                weak var presenter: \(name)InteractorOutputProtocol? { get set }
             }
 
             protocol \(name)InteractorOutputProtocol {
