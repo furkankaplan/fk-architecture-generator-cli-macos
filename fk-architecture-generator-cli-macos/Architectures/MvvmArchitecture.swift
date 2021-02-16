@@ -58,9 +58,9 @@ struct MvvmArchitecture: Architecture {
 
             class \(name)ViewController: UIViewController {
 
-                let viewModel: \(name)ViewModel
+                var viewModel: \(name)ViewModelProtocol
                 
-                init(viewModel: \(name)ViewModel = \(name)ViewModel()) {
+                init(viewModel: \(name)ViewModelProtocol = \(name)ViewModel()) {
                     self.viewModel = viewModel
                     super.init(nibName: nil, bundle: nil)
                 }
@@ -91,7 +91,10 @@ struct MvvmArchitecture: Architecture {
 
             import Foundation
 
-            struct \(name)ViewModel {
+            protocol \(name)ViewModelProtocol {
+
+            }
+            class \(name)ViewModel: \(name)ViewModelProtocol {
 
             }
             """
